@@ -7,6 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
@@ -101,105 +102,109 @@
             </button>
         </div>
     </section>
-    <!-- SECCIÓN 2: CARTELERA -->
-    <section class="w-full bg-white text-black">
-    <!-- Barra Azul Superior (De extremo a extremo de la pantalla) -->
-        <div class="w-full bg-[#2532bc] px-6 lg:px-12 py-4 flex flex-col md:flex-row items-center justify-between text-white shadow-md gap-4">
-            <h2 class="text-2xl sm:text-3xl font-extrabold tracking-wider uppercase">CARTELERA</h2>
-    <!-- Menú de Filtros -->
-            <div class="flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm font-semibold">
+            <!-- SECCIÓN 2: CARTELERA -->
+    <section class="w-full bg-white text-black min-h-screen flex flex-col justify-between overflow-hidden">
+        <div data-aos="fade-down" data-aos-duration="600" class="w-full bg-[#2532bc] px-6 lg:px-12 py-5 flex flex-col md:flex-row items-center justify-between text-white shadow-lg gap-4">
+            <h2 class="text-3xl sm:text-4xl font-black tracking-wider uppercase">CARTELERA</h2>
+            <!-- Menú de Filtros -->
+            <div class="flex flex-wrap items-center justify-center gap-8 text-sm sm:text-base font-bold">
                 <button class="flex items-center space-x-2 hover:text-yellow-400 transition-colors cursor-pointer">
-                    <i class="fa-solid fa-chair text-base"></i>
+                    <i class="fa-solid fa-chair text-lg"></i>
                     <span>En función</span>
                 </button>
                 <button class="flex items-center space-x-2 hover:text-yellow-400 transition-colors cursor-pointer">
-                    <i class="fa-regular fa-star text-base"></i>
+                    <i class="fa-regular fa-star text-lg"></i>
                     <span>Estrenos</span>
                 </button>
                 <button class="flex items-center space-x-2 hover:text-yellow-400 transition-colors cursor-pointer">
-                    <i class="fa-solid fa-ticket text-base"></i>
+                    <i class="fa-solid fa-ticket text-lg"></i>
                     <span>Preventas</span>
                 </button>
                 <button class="flex items-center space-x-2 hover:text-yellow-400 transition-colors cursor-pointer">
-                    <i class="fa-solid fa-border-all text-base"></i>
+                    <i class="fa-solid fa-border-all text-lg"></i>
                     <span>Todos</span>
                 </button>
             </div>
         </div>
         <!-- Contenido de Películas y Flechas -->
-        <div class="py-10 px-4 md:px-12">
-            <div class="relative w-full flex items-center justify-between gap-2 sm:gap-4">
+        <div class="py-10 md:py-14 px-2 md:px-6 my-auto">
+            <div class="relative w-full max-w-[1700px] mx-auto flex items-center justify-between gap-2 md:gap-4">
         <!-- Flecha Izquierda -->
-                <button class="text-[#2532bc] hover:scale-110 transition-transform p-1 z-10 hidden sm:block cursor-pointer">
-                    <svg class="w-10 h-10 md:w-12 md:h-12" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                <button class="text-[#2532bc] hover:scale-125 transition-transform p-1 z-10 hidden sm:block cursor-pointer shrink-0">
+                    <svg class="w-12 h-12 md:w-16 md:h-16" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
                         <polyline points="15 18 9 12 15 6"></polyline>
                     </svg>
                 </button>
-        <!-- Rejilla de Posters (5 columnas) -->
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6 w-full max-w-6xl mx-auto items-start">
-                    <!-- PELÍCULA 1: MOANA 2026 -->
-                    <div class="flex flex-col items-center group cursor-pointer">
-                        <div class="relative w-full h-[260px] sm:h-[290px] md:h-[310px] rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 group-hover:-translate-y-1">
+        <!--Rejilla de Posters Grandes-->
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 lg:gap-6 w-full items-start">
+        <!-- PELÍCULA 1: MOANA 2026 -->
+                    <div data-aos="fade-up" data-aos-delay="100" class="flex flex-col items-center group cursor-pointer w-full">
+                        <div class="relative w-full aspect-[2/3] rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-blue-500/30">
                             <img src="https://cinemasvalledeatriz.com/wp-content/uploads/2025/12/moana.jpg" alt="Moana 2026" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-[#2532bc]/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2 text-center">
-                                <span class="text-white font-extrabold text-sm sm:text-base tracking-wider uppercase">VER FUNCIONES</span>
+                            <div class="absolute inset-0 bg-[#2532bc]/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 text-center z-20">
+                                <span class="text-white font-extrabold text-lg md:text-xl tracking-wider uppercase">VER FUNCIONES</span>
                             </div>
                         </div>
-                        <p class="mt-3 font-bold text-xs sm:text-sm text-[#2532bc] uppercase text-center tracking-wide">MOANA 2026</p>
+                        <p class="mt-4 font-extrabold text-base md:text-lg text-[#2532bc] uppercase text-center tracking-wide">MOANA 2026</p>
                     </div>
                     <!-- PELÍCULA 2: LA ODISEA -->
-                    <div class="flex flex-col items-center group cursor-pointer">
-                        <div class="relative w-full h-[260px] sm:h-[290px] md:h-[310px] rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 group-hover:-translate-y-1">
+                    <div data-aos="fade-up" data-aos-delay="200" class="flex flex-col items-center group cursor-pointer w-full">
+                        <div class="relative w-full aspect-[2/3] rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-blue-500/30">
                             <img src="https://pics.filmaffinity.com/La_odisea-734013375-large.jpg" alt="La Odisea" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-[#2532bc]/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2 text-center">
-                                <span class="text-white font-extrabold text-sm sm:text-base tracking-wider uppercase">VER FUNCIONES</span>
+                            <div class="absolute inset-0 bg-[#2532bc]/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 text-center z-20">
+                                <span class="text-white font-extrabold text-lg md:text-xl tracking-wider uppercase">VER FUNCIONES</span>
                             </div>
                         </div>
-                        <p class="mt-3 font-bold text-xs sm:text-sm text-[#2532bc] uppercase text-center tracking-wide">LA ODISEA</p>
+                        <p class="mt-4 font-extrabold text-base md:text-lg text-[#2532bc] uppercase text-center tracking-wide">LA ODISEA</p>
                     </div>
                     <!-- PELÍCULA 3: SUPERGIRL -->
-                    <div class="flex flex-col items-center group cursor-pointer">
-                        <div class="relative w-full h-[260px] sm:h-[290px] md:h-[310px] rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 group-hover:-translate-y-1">
+                    <div data-aos="fade-up" data-aos-delay="300" class="flex flex-col items-center group cursor-pointer w-full">
+                        <div class="relative w-full aspect-[2/3] rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-blue-500/30">
                             <img src="https://static.wikia.nocookie.net/doblaje/images/d/da/Supergirl_2026.png/revision/latest/scale-to-width-down/1000?cb=20251210190434&path-prefix=es" alt="Supergirl" class="w-full h-full object-cover">
-                            <!-- Capa Azul al hacer Hover -->
-                            <div class="absolute inset-0 bg-[#2532bc]/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2 text-center">
-                                <span class="text-white font-extrabold text-sm sm:text-base tracking-wider uppercase">VER FUNCIONES</span>
+                            <div class="absolute inset-0 bg-[#2532bc]/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 text-center z-20">
+                                <span class="text-white font-extrabold text-lg md:text-xl tracking-wider uppercase">VER FUNCIONES</span>
                             </div>
                         </div>
-                        <p class="mt-3 font-bold text-xs sm:text-sm text-[#2532bc] uppercase text-center tracking-wide">SUPERGIRL</p>
+                        <p class="mt-4 font-extrabold text-base md:text-lg text-[#2532bc] uppercase text-center tracking-wide">SUPERGIRL</p>
                     </div>
                     <!-- PELÍCULA 4: TOY STORY 5 -->
-                    <div class="flex flex-col items-center group cursor-pointer">
-                        <div class="relative w-full h-[260px] sm:h-[290px] md:h-[310px] rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 group-hover:-translate-y-1">
+                    <div data-aos="fade-up" data-aos-delay="400" class="flex flex-col items-center group cursor-pointer w-full">
+                        <div class="relative w-full aspect-[2/3] rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-blue-500/30">
                             <img src="https://lumiere-a.akamaihd.net/v1/images/alta_pre_int_intl_payoff_peeking_cmyk_v2_a283fa09.png" alt="Toy Story 5" class="w-full h-full object-cover">
-                            <!-- Capa Azul al hacer Hover -->
-                            <div class="absolute inset-0 bg-[#2532bc]/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2 text-center">
-                                <span class="text-white font-extrabold text-sm sm:text-base tracking-wider uppercase">VER FUNCIONES</span>
+                            <div class="absolute inset-0 bg-[#2532bc]/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 text-center z-20">
+                                <span class="text-white font-extrabold text-lg md:text-xl tracking-wider uppercase">VER FUNCIONES</span>
                             </div>
                         </div>
-                        <p class="mt-3 font-bold text-xs sm:text-sm text-[#2532bc] uppercase text-center tracking-wide">TOY STORY 5</p>
+                        <p class="mt-4 font-extrabold text-base md:text-lg text-[#2532bc] uppercase text-center tracking-wide">TOY STORY 5</p>
                     </div>
                     <!-- PELÍCULA 5: SCARY MOVIE 6 -->
-                    <div class="flex flex-col items-center group cursor-pointer">
-                        <div class="relative w-full h-[260px] sm:h-[290px] md:h-[310px] rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 group-hover:-translate-y-1">
+                    <div data-aos="fade-up" data-aos-delay="500" class="flex flex-col items-center group cursor-pointer w-full">
+                        <div class="relative w-full aspect-[2/3] rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-blue-500/30">
                             <img src="https://img.asmedia.epimg.net/resizer/v2/LSCVJYGXHBE4ZKZFUHWVVNQUYM.jpg?auth=ce9177a0f2fee6fef02ddd38a865889fe19cb6153a73fce1884a13d0a42a1e7a&width=760" alt="Scary Movie 6" class="w-full h-full object-cover">
-                            <!-- Capa Azul al hacer Hover -->
-                            <div class="absolute inset-0 bg-[#2532bc]/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2 text-center">
-                                <span class="text-white font-extrabold text-sm sm:text-base tracking-wider uppercase">VER FUNCIONES</span>
+                            <div class="absolute inset-0 bg-[#2532bc]/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 text-center z-20">
+                                <span class="text-white font-extrabold text-lg md:text-xl tracking-wider uppercase">VER FUNCIONES</span>
                             </div>
                         </div>
-                        <p class="mt-3 font-bold text-xs sm:text-sm text-[#2532bc] uppercase text-center tracking-wide">SCARY MOVIE 6</p>
+                        <p class="mt-4 font-extrabold text-base md:text-lg text-[#2532bc] uppercase text-center tracking-wide">SCARY MOVIE 6</p>
                     </div>
                 </div>
                 <!-- Flecha Derecha -->
-                <button class="text-[#2532bc] hover:scale-110 transition-transform p-1 z-10 hidden sm:block cursor-pointer">
-                    <svg class="w-10 h-10 md:w-12 md:h-12" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                <button class="text-[#2532bc] hover:scale-125 transition-transform p-1 z-10 hidden sm:block cursor-pointer shrink-0">
+                    <svg class="w-12 h-12 md:w-16 md:h-16" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
                         <polyline points="9 18 15 12 9 6"></polyline>
                     </svg>
                 </button>
             </div>
         </div>
+
     </section>
-    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 700,   // Velocidad de la animación (en ms)
+            once: false,      // Se ejecuta 1 sola vez al bajar
+            offset: 350      // Distancia antes de activarse la animación
+        });
+    </script>
 </body>
 </html>
