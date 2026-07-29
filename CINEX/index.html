@@ -79,38 +79,45 @@
             <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent opacity-80"></div>
         </div>
         
-        <!-- Contenedor de Textos (Spider-Man) -->
-        <div class="relative z-10 w-full px-6 lg:px-12 flex flex-col h-full justify-end items-center text-center pb-16 md:justify-center md:items-start md:text-left md:pb-0">
-            <img src="https://image.tmdb.org/t/p/original/g4YvZOWYmissloGtaVAeWybkPct.png" 
-                alt="Spider-Man: Un Nuevo Día" 
-                class="w-64 md:w-80 lg:w-[400px] mb-4 object-contain"
-                data-aos="fade-up">
+        <!-- Contenedor Principal -->
+        <div class="relative z-10 w-full px-6 lg:px-12 flex flex-col h-full justify-end items-center pb-16 md:justify-center md:items-start md:pb-0">
             
-            <!-- Contenedor de Información (Modificado para centrar con el logo) -->
-            <div class="flex items-center justify-center gap-2 text-[10px] md:text-xs font-semibold tracking-wider mb-4 text-white w-64 md:w-80 lg:w-[400px]" 
-                data-aos="fade-up" data-aos-delay="100">
-                <span class="flex items-center gap-1"><i class="fa-regular fa-clock"></i> 144min</span>
-                <span>|</span>
-                <span>ACCIÓN/FICCIÓN</span>
-                <span class="bg-blue-600 px-1.5 py-0.5 rounded text-[10px]">+12</span>
-            </div>
-            
-            <!-- Sinopsis -->
-            <p class="text-xs md:text-sm text-gray-200 max-w-sm md:max-w-md mb-8 leading-relaxed" 
-            data-aos="fade-up" data-aos-delay="200">
-                Dividido entre la universidad y su deber, Peter Parker deberá romper la promesa de abandonar el traje cuando una nueva amenaza aceche a sus amigos.
-            </p>
-            
-            <!-- Botones -->
-            <div class="w-full max-w-xs flex flex-col gap-3" 
-                data-aos="fade-up" data-aos-delay="300">
-                <button class="w-full py-3 rounded-full border-2 border-white/80 text-white text-xs font-bold tracking-widest hover:bg-white hover:text-black transition-colors">
-                    ESTRENO 29-07-2026
-                </button>
-                <button class="w-full py-3 rounded-full bg-[#1c3894] hover:bg-blue-700 text-white text-xs font-bold tracking-widest transition-colors">
-                    COMPRAR BOLETOS
-                </button>
-            </div>
+            <!-- NUEVO: Agrupador para mantener todo centrado internamente -->
+            <div class="flex flex-col items-center text-center w-64 md:w-80 lg:w-[400px]">
+                
+                <!-- Logo -->
+                <img src="https://image.tmdb.org/t/p/original/g4YvZOWYmissloGtaVAeWybkPct.png" 
+                    alt="Spider-Man: Un Nuevo Día" 
+                    class="w-full mb-4 object-contain"
+                    data-aos="fade-up">
+                
+                <!-- Contenedor de Información -->
+                <div class="flex items-center justify-center gap-2 text-[10px] md:text-xs font-semibold tracking-wider mb-4 text-white w-full" 
+                    data-aos="fade-up" data-aos-delay="100">
+                    <span class="flex items-center gap-1"><i class="fa-regular fa-clock"></i> 144min</span>
+                    <span>|</span>
+                    <span>ACCIÓN/FICCIÓN</span>
+                    <span class="bg-blue-600 px-1.5 py-0.5 rounded text-[10px]">+12</span>
+                </div>
+                
+                <!-- Sinopsis -->
+                <p class="text-xs md:text-sm text-gray-200 w-full mb-8 leading-relaxed" 
+                data-aos="fade-up" data-aos-delay="200">
+                    Dividido entre la universidad y su deber, Peter Parker deberá romper la promesa de abandonar el traje cuando una nueva amenaza aceche a sus amigos.
+                </p>
+                
+                <!-- Botones -->
+                <div class="w-full max-w-xs flex flex-col gap-3" 
+                    data-aos="fade-up" data-aos-delay="300">
+                    <button class="w-full py-3 rounded-full border-2 border-white/80 text-white text-xs font-bold tracking-widest hover:bg-white hover:text-black transition-colors">
+                        ESTRENO 29-07-2026
+                    </button>
+                    <button class="w-full py-3 rounded-full bg-[#1c3894] hover:bg-blue-700 text-white text-xs font-bold tracking-widest transition-colors">
+                        COMPRAR BOLETOS
+                    </button>
+                </div>
+                
+            </div> <!-- Fin del Agrupador -->
         </div>
         
         <!-- Botón flecha lateral -->
