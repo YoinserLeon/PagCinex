@@ -14,12 +14,16 @@
         }
     </style>
 </head>
+
 <body class="bg-[#f3f4f6] text-white antialiased overflow-x-hidden">
 
-<header class="absolute top-0 left-0 w-full z-50 bg-gradient-to-r from-blue-500/20 via-blue-900/30 to-black/40 backdrop-blur-md border-b border-white/10">
-        <div class="w-full px-6 lg:px-10 h-14 flex items-center justify-between">
-            
-            <!-- Logo -->
+<header class="sticky top-0 left-0 w-full z-50 bg-gradient-to-r from-blue-500/20 via-blue-900/30 to-black/40 backdrop-blur-md border-b border-white/10">
+        <div class="w-full px-6 lg:px-10 h-14 flex items-center justify-between">     
+<!--
+========================================================
+================= LOGO DE PELICULA ===================== 
+========================================================
+-->
             <div class="flex items-center shrink-0">
                 <a href="#" class="flex items-center">
                     <img src="https://www.cinex.com.ve/assets/images/xlogo.png.pagespeed.ic.g7fFsLLvP4.webp" 
@@ -27,8 +31,11 @@
                          class="h-5 lg:h-6 w-auto object-contain">
                 </a>
             </div>
-
-            <!-- Menú de Navegación (Ahora usa lg:flex y espacios responsivos) -->
+<!--
+========================================================
+================ MENU DE NAVEGACION ==================== 
+========================================================
+-->
             <nav class="hidden lg:flex items-center space-x-4 xl:space-x-8 text-xs xl:text-sm font-semibold tracking-wide">
                 <a href="#" class="hover:text-yellow-400 transition-colors whitespace-nowrap">CARTELERA</a>
                 <a href="#" class="hover:text-yellow-400 transition-colors whitespace-nowrap">DULCERÍA</a>
@@ -40,22 +47,24 @@
                     <img src="data:image/webp;base64,UklGRtQJAABXRUJQVlA4TMcJAAAvkEAKEFoRCBD8d9MQEROAyZpwbFs79tg2qvwDCGs7mQMr25Vt27Zt2/xtxTafGfxVrDZ9BpFWFRxr244537izFjELmKknqrMCdSlTOVU6G5Ur27Zt27bz3nBt2zb27O/7fqv9y+ABbKez9Y2USeVOpdnaTh7BSWXbtm1nyxEFgACqybbtA3hvtLm3dQ0323Zbk+sOTR7t+v5vAuho23b8c34biHaSRbjKQtI6lW1nBUnr3rZt28n4LL7vr6i+x8rYtv4czzM6Dii2tS2rnsg8mAMNKrOCCJVr1bW5Vdp1d6vurhtqtm3Llvv3H9mCyAhkOh0ikSHcMpHkEJnAB7Dq7u5+SoAkybSt82zbtm3btm3btm1/27Zt2/a/fOoJeLqLHWAAwFYQLsM/K1kLgIHnX1+t09utd50bsjOWdwEWshIAgy9+39qGFhruPfNN8qeAhuyC4yWAWSwEwEza9exUaKkb+zSV5nWtJYBEokuuRgEm9sUGBKIcmv8mADOo19NjkZWO3HMFTat6SAxmAQrpv6+464dA74EZOfgNMlJ7Byzg+mf6oV4t9AUV+7FKgZoZERaDBfRmASqpv0c5uDfW7ZExLo+NdnVilJ0z452c4FurV1ANYAvUu7OhATZYIXY9BFCCEzBqgBOqBzoJkcANG3ED51EIzk5CBEWwbZkMU0SDpwFjJM3sJESggX5cwRmEgyNBAoLnowqSLZAdgksCS0zjKi6hHUo9eAVYBLD6lu8R6v3QRW6no9QuweitEhKlZQw+54A3BV8KfhL8LPhOMNoEfn16OfbN5Vfb768/cRP+aYCpsRkmaMEpzEG/sQ/KKyCVJOAFSxIY4wi+YkcnIXIUM0Dh2kw04zWSkyxCIyjI2jcH0yBhDa/wEat4CwUw9GNjyxzk4ersBkrwB6mBNW7VML71Y3RO8AMfIAD6qhaE9GMYQmhfjeUjeA8a/iMG7N0BGHvx+zxDuu2ySzYyPhZRQwNkBBhRWhQFHLANHADvfQX377TitrFOnFXvwanVIZxYXMLplQ1cVNvBM0uPGPP1PwSeBAxQwXagqnABYgl0VuEifJMEUXiEfkgE6fhVVQEnZkDBwQ3L0boZdIx2EiJBCj7hBfyWYgQUNEI4gSp2Q3dp/7IWcCGjDUl4jsRgG17BPEEcfqwDI67jMdhQu2F3EgihHvsgjfx+TEMmmYIN8+ADpq4ARp583U9WDSdxL4accZh6hS8Makj01oA9APVsVtIZxzOu1EmlRZxQOEYntzgm2zijcoIbGmekVzaeDoz6/CuZAyEwJAjD/8JvjA7/j73gD8xwpgqNYEzghbuFFoigA3+xuromT4P7amwNjEDajfDCEagsRfQw/iEDzAjBYxSBL+3/Y6gLXIF5C54iPtiG2fVJBiAKBlzD/UByCTKSwAZPMQUX3EE/ONLEflyHVhfAf/jx58Ve9VQYnwqIrhH4lqhEVCk1r6rRgY1vrc4FD17xRTS8PaRMu9jUp2NzhtPLC7iltwPvX46Rx/1flUNmcychmsipfpyHChghBAOwB1rYU4WzsEkOryk8gvGeKZMhPVxzNuA9XnYSYiLO4Dk8YDc8jFIUbAcZ1eAO5vFiR/oC5dtRfACMSYJrKwIBHD6UbEYorsISqbgF705CtCIAz2Dd1en3zcnAZqqMfghvhMRWSO+F+FY9v2x/ZuEtEOYFXOoEm7qh6FlkHVHpnnY7Pv1sxveCUcb/8ObaSYhWuIGONWxNK7TXADUPNQl0cGjFaoxPxnccXwhH/CxwQG01Ftdtn4L2QAi1WK+Z+IGKtQEXtmAYMn2Sg9MBvDkI3hYwwRavYRhorME2cKIUO6DYBl3c6OoJYNAt/42HX8dnkycpX237EF1tzTSsloxuDa86IqwOIZyLrKPLdS462wb2vKmC55Xwihb8au0JTBrgxxcA59LcAJ9tVYV90NyNCDyoAg2//sclKGcPVtEMZixUFX6iKIEQavsL9xGYBJzYjC6I9wyZ3Qp0kLsJJByEQCOQxatNgTO+HoEQWrENcm3Qx81uPD0BTNl/fltPKhwhb+0nrdmnoN0kY9xgGGhRO+htH9gEVkTrNY14SxmvacCz/2W8pwuj7LdAJAmiQQYpScAEDcwA+IunO/EDJdNm/L8O//ur9kAjk/ERa3BBGLACD9EAnoAPCbhRVXiAoCTBHC7DuEfgRjYuwqiBuL1ISiss8QmRYGmAE+lzwY9SnIQYWJGPs4faEIIX3QEYtnv/3eufePjOrxYoGBYpu1fo+rq5p0YqmwPUD+BRmxc9pCi9+l3BCx9lvP/bgI+U8bLgO5Mr4304gTFBMaj4C/1BaCEK81gDDsBvaf9EvN5SOAZbzFbNg3qCXpCqqtYhFhJwxCh+VOEBmnGyJiEyCQIPIHhfF1jBYMtuxOHK6gbyBpAIqRUQTRK8xHZw4SrudxIigSY+YWABFhJ44jFa27Ab72HUDYBpyNWXc2nDEHHTMCXPGgVLE/NYd20nUDGn1HeitYoCGgFaJHcvFXH5QAF3zhbw4EETnn2v4BOtGGPzApQT2OF/FUhVhV/ohiw4kQlU4RvaIN1JCJijZmhrkgOg1QCq5lQTdFxDLIQCF9wtfF0F4QRD+Ic4cCTQwDjkwXAYXS2B7STMgCUp7MLhBdDCWfRCItmEL8gCK27iQRIIoBXALRgmk1GGbyian0AYMyAhCZzdABi6ffPd4xKzi88wRN6eg8sQRMkXIbvfQtOOoONAb/XPYP4HiufhwoHgor4iLugp4rxWAVf0NeOqyTIeP+nGn9/n9eDvJETQdrgKa3jdD80k0MM23MEoDNJNmKAGvosCVRzAO7zCQeRsB0OSwAGXC+8RnizatxOfcQZPDxe0l4KKdXzFzy1bcAnmixAFytoZOLJlPkISxOAl/uAiHoKOKzsyZ16SwKhwPEkggK6Z+L7x0M5CC0TT3Vth/sT4+S2fNgmbssGu8qj7u5SM+eo6U2va0Zn/0CG8xRvdLHRXuw3XTtRx4XBw6UhwVldwZjN4aG2cOurrORGcnYRIpk3dNgKm/EWhtBm5UEgSBOAovuEt5iC3tJMQiMIhXNm4cQF2wypghA1OgYz/OLAjSWCKTfi4FsMQTBCB0gZEt8G9kcBxLz4cwS7Ygy3dBhhy8vHWNjgy9ZxWOKq56fIH/mjzZe5OVr0FDXuAekv4d8nFHMD6MX9vXZ/erb957LAXdy624LLx4JWLGfLY38/g3Z2E+Jf/+AdY/HYhF93I14yf9ccwfSM7+TleAJj2FAjB7bfPq6Wf344fjvv7DAVH/gte81xF+y27XvoIdfK/swUw94mlvOW75JKr/Stu1r+f7nsFAA==" alt="Cinexclusivo" class="h-6 w-auto object-contain">
                 </a>
             </nav>
-            
-            <!-- Botón Ingresa + Menú Hamburguesa -->
             <div class="flex items-center gap-4 shrink-0">
                 <a href="#" class="font-bold text-xs lg:text-sm tracking-wider hover:text-yellow-400 transition-colors px-3 py-1.5 rounded-lg border border-transparent hover:border-white/25">
                     INGRESA
                 </a>
-                <!-- Ícono de Menú Hamburguesa (Aparece en móvil y tablet) -->
+                <!-- Ícono de Menú Hamburguesa (Aparece en móvil) -->
                 <button class="block lg:hidden text-white hover:text-yellow-400 cursor-pointer">
                     <i class="fa-solid fa-bars text-xl"></i>
                 </button>
             </div>
-
         </div>
     </header>
-
-    <section class="relative w-full h-screen min-h-[600px] flex items-center overflow-hidden">
+<!--
+========================================================
+==================== SECCION N1 ======================== 
+========================================================
+-->
+    <!-- video de fondo -->
+    <section class="relative w-full h-screen min-h-[600px] flex items-center overflow-hidden -mt-14 pt-28 md:pt-20">
         <div class="absolute inset-0 z-0 overflow-hidden bg-black">
             <video 
                 autoplay 
@@ -69,52 +78,42 @@
             <div class="absolute inset-0 bg-gradient-to-r from-[#070914]/90 via-[#070914]/50 to-transparent"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent opacity-80"></div>
         </div>
-
-<div class="relative z-10 w-full px-6 lg:px-10 pt-16 flex flex-col justify-center h-full" data-aos="fade-right">
+        
+        <!-- Contenedor de Textos (Spider-Man) -->
+        <div class="relative z-10 w-full px-6 lg:px-12 flex flex-col h-full justify-end items-center text-center pb-16 md:justify-center md:items-start md:text-left md:pb-0">
+            <img src="https://image.tmdb.org/t/p/original/g4YvZOWYmissloGtaVAeWybkPct.png" 
+                alt="Spider-Man: Un Nuevo Día" 
+                class="w-64 md:w-80 lg:w-[400px] mb-4 object-contain"
+                data-aos="fade-up">
             
-            <!-- Contenedor principal: Centrado en móvil (items-center), alineado a la izquierda en PC (md:items-start) -->
-            <div class="flex flex-col items-center md:items-start space-y-4 md:space-y-6 max-w-md w-full mx-auto md:mx-0">
-                
-                <div class="flex flex-col items-center md:items-start w-full">
-                    <!-- Logo: Pequeño en móvil (w-[200px]), original en PC (md:w-[280px] lg:w-[350px]) -->
-                    <img src="https://image.tmdb.org/t/p/original/g4YvZOWYmissloGtaVAeWybkPct.png" 
-                         alt="Spider-Man Logo" 
-                         class="w-[200px] md:w-[280px] lg:w-[350px] object-contain drop-shadow-[0_8px_15px_rgba(0,0,0,0.8)] transition-all">
-                    
-                    <!-- Detalles: Espaciado y texto reducido en móvil, original en PC -->
-                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-2 md:gap-x-6 text-[11px] md:text-sm font-semibold text-white mt-4 w-full drop-shadow-md">
-                        <div class="flex items-center space-x-1.5 md:space-x-2">
-                            <i class="fa-regular fa-clock text-gray-300"></i>
-                            <span>145min</span>
-                        </div>
-                        <div class="flex items-center space-x-1.5 md:space-x-2">
-                            <i class="fa-solid fa-clapperboard text-gray-300"></i>
-                            <span>ACCIÓN / FICCIÓN</span>
-                        </div>
-                        <span class="bg-[#2532bc] text-white font-bold text-[10px] md:text-xs px-2 md:px-2.5 py-0.5 md:py-1 rounded">
-                            +12
-                        </span>
-                    </div>
-                </div>
-                
-                <!-- Párrafo: Centrado en móvil, Justificado en PC (como tu original) -->
-                <p class="text-xs md:text-sm lg:text-base text-gray-200 leading-relaxed font-normal text-center md:text-justify drop-shadow-md w-full">
-                    Dividido entre la universidad y su deber, Peter Parker deberá romper la promesa de abandonar el traje cuando una nueva amenaza aceche a sus amigos.
-                </p>
-                
-                <!-- Botones: Apilados y 100% ancho en móvil, En fila y ancho automático en PC -->
-                <div class="flex flex-col md:flex-row items-center w-full gap-3 md:gap-4 pt-2">
-                    <a href="#" class="w-full md:w-auto text-center border-[2px] border-white text-white font-bold text-xs md:text-sm px-6 py-2.5 rounded-full hover:bg-white hover:text-black transition-all">
-                        ESTRENO 29-07-2026
-                    </a>
-                    <a href="#" class="w-full md:w-auto text-center bg-[#2532bc] hover:bg-[#1d2799] text-white font-bold text-xs md:text-sm px-8 py-2.5 rounded-full transition-all shadow-lg shadow-blue-900/40">
-                        COMPRAR BOLETOS
-                    </a>
-                </div>
+            <!-- Contenedor de Información (Modificado para centrar con el logo) -->
+            <div class="flex items-center justify-center gap-2 text-[10px] md:text-xs font-semibold tracking-wider mb-4 text-white w-64 md:w-80 lg:w-[400px]" 
+                data-aos="fade-up" data-aos-delay="100">
+                <span class="flex items-center gap-1"><i class="fa-regular fa-clock"></i> 144min</span>
+                <span>|</span>
+                <span>ACCIÓN/FICCIÓN</span>
+                <span class="bg-blue-600 px-1.5 py-0.5 rounded text-[10px]">+12</span>
             </div>
             
+            <!-- Sinopsis -->
+            <p class="text-xs md:text-sm text-gray-200 max-w-sm md:max-w-md mb-8 leading-relaxed" 
+            data-aos="fade-up" data-aos-delay="200">
+                Dividido entre la universidad y su deber, Peter Parker deberá romper la promesa de abandonar el traje cuando una nueva amenaza aceche a sus amigos.
+            </p>
+            
+            <!-- Botones -->
+            <div class="w-full max-w-xs flex flex-col gap-3" 
+                data-aos="fade-up" data-aos-delay="300">
+                <button class="w-full py-3 rounded-full border-2 border-white/80 text-white text-xs font-bold tracking-widest hover:bg-white hover:text-black transition-colors">
+                    ESTRENO 29-07-2026
+                </button>
+                <button class="w-full py-3 rounded-full bg-[#1c3894] hover:bg-blue-700 text-white text-xs font-bold tracking-widest transition-colors">
+                    COMPRAR BOLETOS
+                </button>
+            </div>
         </div>
-
+        
+        <!-- Botón flecha lateral -->
         <div class="absolute right-6 lg:right-10 z-20 hidden md:flex items-center" data-aos="fade-left">
             <button class="text-white/50 hover:text-white transition-colors cursor-pointer">
                 <svg class="w-16 h-16 drop-shadow-lg" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
@@ -123,45 +122,52 @@
             </button>
         </div>
     </section>
-
+<!--
+========================================================
+==================== SECCION N2 ======================== 
+========================================================
+-->
     <section class="w-full bg-white text-black flex flex-col overflow-hidden pb-16">
-        
-        <div data-aos="fade-down" data-aos-duration="600" class="w-full bg-[#0c2363] px-6 lg:px-12 py-5 flex flex-col md:flex-row items-center justify-between text-white shadow-lg gap-4 mb-10">
-            <h2 class="text-3xl sm:text-4xl font-black tracking-wider uppercase">CARTELERA</h2>
-            
-            <div class="flex flex-wrap items-center justify-center gap-8 text-sm sm:text-base font-bold">
-                <button class="flex items-center space-x-2 hover:text-yellow-400 transition-colors cursor-pointer">
-                    <i class="fa-solid fa-chair text-lg"></i>
-                    <span>En función</span>
-                </button>
-                <button class="flex items-center space-x-2 hover:text-yellow-400 transition-colors cursor-pointer">
-                    <i class="fa-regular fa-star text-lg"></i>
-                    <span>Estrenos</span>
-                </button>
-                <button class="flex items-center space-x-2 hover:text-yellow-400 transition-colors cursor-pointer">
-                    <i class="fa-solid fa-ticket text-lg"></i>
-                    <span>Preventas</span>
-                </button>
-                <button class="flex items-center space-x-2 hover:text-yellow-400 transition-colors cursor-pointer">
-                    <i class="fa-solid fa-border-all text-lg"></i>
-                    <span>Todos</span>
-                </button>
+        <div class="w-full pt-10 pb-8 mb-8 md:mb-12 bg-[#0b2265]" data-aos="fade-down">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between w-full">
+                <!-- Título CARTELERA (Esquina izquierda en PC, Centro en móvil) -->
+                <h2 class="px-6 text-3xl md:text-4xl font-black text-white text-center md:text-left mb-6 md:mb-0 tracking-wide" 
+                    data-aos="fade-right" data-aos-delay="100">
+                    CARTELERA
+                </h2>
+                <!-- Contenedor de Filtros (Esquina derecha en PC, Scroll horizontal en móvil) -->
+                <div class="px-6 flex flex-nowrap md:flex-wrap items-center justify-start md:justify-end gap-6 md:gap-8 w-full text-white overflow-x-auto md:overflow-visible scroll-smooth [scrollbar-width:n   [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+                    data-aos="fade-left" data-aos-delay="200">
+                    <!-- Botón 1 -->
+                    <button class="flex items-center gap-2 whitespace-nowrap text-sm md:text-base font-bold hover:text-[#ffcc00] transition-colors">
+                        <i class="fa-solid fa-video"></i> En función
+                    </button>
+                    <!-- Botón 2 -->
+                    <button class="flex items-center gap-2 whitespace-nowrap text-sm md:text-base font-bold hover:text-[#ffcc00] transition-colors">
+                        <i class="fa-regular fa-star"></i> Estrenos
+                    </button>
+                    <!-- Botón 3 -->
+                    <button class="flex items-center gap-2 whitespace-nowrap text-sm md:text-base font-bold hover:text-[#ffcc00] transition-colors">
+                        <i class="fa-solid fa-ticket"></i> Preventas
+                    </button>
+                    <!-- Botón 4 -->
+                    <button class="flex items-center gap-2 whitespace-nowrap text-sm md:text-base font-bold hover:text-[#ffcc00] transition-colors">
+                        <i class="fa-solid fa-border-all"></i> Todos
+                    </button>
+                </div>
             </div>
         </div>
-
         <div class="px-2 md:px-6">
             <div class="relative w-full max-w-[1700px] mx-auto flex items-center justify-between gap-2 md:gap-4">
-                
                 <button class="text-[#2532bc] hover:scale-125 transition-transform p-1 z-10 hidden sm:block cursor-pointer shrink-0">
                     <svg class="w-12 h-12 md:w-16 md:h-16" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
                         <polyline points="15 18 9 12 15 6"></polyline>
                     </svg>
                 </button>
-
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 lg:gap-6 w-full items-start">
-                    
                     <div data-aos="fade-up" data-aos-delay="100" class="flex flex-col items-center group cursor-pointer w-full">
                         <div class="relative w-full aspect-[2/3] rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-blue-500/30">
+                            <!--MOANA-->
                             <img src="https://cinemasvalledeatriz.com/wp-content/uploads/2025/12/moana.jpg" alt="Moana 2026" class="w-full h-full object-cover">
                             <div class="absolute inset-0 bg-[#0c2363]/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 text-center z-20">
                                 <span class="text-white font-extrabold text-lg md:text-xl tracking-wider uppercase">VER FUNCIONES</span>
@@ -169,7 +175,7 @@
                         </div>
                         <p class="mt-4 font-extrabold text-base md:text-lg text-[#0c2363] uppercase text-center tracking-wide">MOANA 2026</p>
                     </div>
-
+                    <!--LA ODISEA-->
                     <div data-aos="fade-up" data-aos-delay="200" class="flex flex-col items-center group cursor-pointer w-full">
                         <div class="relative w-full aspect-[2/3] rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-blue-500/30">
                             <img src="https://pics.filmaffinity.com/La_odisea-734013375-large.jpg" alt="La Odisea" class="w-full h-full object-cover">
@@ -179,7 +185,7 @@
                         </div>
                         <p class="mt-4 font-extrabold text-base md:text-lg text-[#0c2363] uppercase text-center tracking-wide">LA ODISEA</p>
                     </div>
-
+                    <!--SUPERGIRL-->
                     <div data-aos="fade-up" data-aos-delay="300" class="flex flex-col items-center group cursor-pointer w-full">
                         <div class="relative w-full aspect-[2/3] rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-blue-500/30">
                             <img src="https://static.wikia.nocookie.net/doblaje/images/d/da/Supergirl_2026.png/revision/latest/scale-to-width-down/1000?cb=20251210190434&path-prefix=es" alt="Supergirl" class="w-full h-full object-cover">
@@ -189,7 +195,7 @@
                         </div>
                         <p class="mt-4 font-extrabold text-base md:text-lg text-[#0c2363] uppercase text-center tracking-wide">SUPERGIRL</p>
                     </div>
-
+                    <!--TOY STORY-->
                     <div data-aos="fade-up" data-aos-delay="400" class="flex flex-col items-center group cursor-pointer w-full">
                         <div class="relative w-full aspect-[2/3] rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-blue-500/30">
                             <img src="https://lumiere-a.akamaihd.net/v1/images/alta_pre_int_intl_payoff_peeking_cmyk_v2_a283fa09.png" alt="Toy Story 5" class="w-full h-full object-cover">
@@ -199,7 +205,7 @@
                         </div>
                         <p class="mt-4 font-extrabold text-base md:text-lg text-[#0c2363] uppercase text-center tracking-wide">TOY STORY 5</p>
                     </div>
-
+                    <!--SCARY MOVIE 6-->
                     <div data-aos="fade-up" data-aos-delay="500" class="flex flex-col items-center group cursor-pointer w-full">
                         <div class="relative w-full aspect-[2/3] rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-blue-500/30">
                             <img src="https://img.asmedia.epimg.net/resizer/v2/LSCVJYGXHBE4ZKZFUHWVVNQUYM.jpg?auth=ce9177a0f2fee6fef02ddd38a865889fe19cb6153a73fce1884a13d0a42a1e7a&width=760" alt="Scary Movie 6" class="w-full h-full object-cover">
@@ -209,36 +215,37 @@
                         </div>
                         <p class="mt-4 font-extrabold text-base md:text-lg text-[#0c2363] uppercase text-center tracking-wide">SCARY MOVIE 6</p>
                     </div>
-
                 </div>
-
                 <button class="text-[#2532bc] hover:scale-125 transition-transform p-1 z-10 hidden sm:block cursor-pointer shrink-0">
                     <svg class="w-12 h-12 md:w-16 md:h-16" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
                         <polyline points="9 18 15 12 9 6"></polyline>
                     </svg>
                 </button>
-
             </div>
         </div>
     </section>
-
-    <section class="w-full bg-[#0c2363] py-16 md:py-24 px-6 lg:px-12 text-white overflow-hidden relative">
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-400/10 via-transparent to-transparent pointer-events-none"></div>
-
-    <section class="w-full py-16 px-6 lg:px-12 bg-[#0b2265] text-white">
-        <div class="max-w-[1700px] mx-auto text-center mb-12">
-            <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight" data-aos="fade-down">
-                EXPERIENCIA <span class="text-[#ffcc00]">CINEX</span>
-            </h2>
-            <p class="text-base md:text-lg opacity-90 mt-3" data-aos="fade-up">Tecnología inmersiva y confort de última generación en cada función</p>
+<!--
+========================================================
+==================== SECCION N3 ======================== 
+========================================================
+-->
+    <section class="w-full bg-[#0b2265] pt-8 pb-16 md:pt-10 md:pb-24 px-6 lg:px-12 text-white overflow-hidden relative">
+        <!-- Efecto de gradient de fondo -->
+        <div 
+            class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-400/10 via-transparent to-transparent pointer-events-none">
         </div>
-
-    </section>
-
+        <div class="max-w-[1700px] mx-auto relative z-10">
+            <!-- Título y Subtítulo -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight" data-aos="fade-down">
+                    EXPERIENCIA <span class="text-[#ffcc00]">CINEX</span>
+                </h2>
+                <p class="text-base md:text-lg opacity-90 mt-3" data-aos="fade-up">Tecnología inmersiva y confort de última generación en cada función</p>
+            </div>
+            <!-- Grid de Características y Video -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                
+                <!-- Columna Izquierda: Características -->
                 <div class="flex flex-col gap-10 md:gap-12">
-                    
                     <div class="flex items-start gap-5 group cursor-default" data-aos="fade-right" data-aos-delay="100">
                         <div class="mt-1 flex-shrink-0 transition-transform duration-300 group-hover:-translate-y-1">
                             <i class="fa-solid fa-wind text-3xl md:text-4xl text-white/90 group-hover:text-blue-300 transition-colors"></i>
@@ -250,7 +257,6 @@
                             </p>
                         </div>
                     </div>
-
                     <div class="flex items-start gap-5 group cursor-default" data-aos="fade-right" data-aos-delay="200">
                         <div class="mt-1 flex-shrink-0 transition-transform duration-300 group-hover:-translate-y-1">
                             <i class="fa-solid fa-headphones-simple text-3xl md:text-4xl text-white/90 group-hover:text-blue-300 transition-colors"></i>
@@ -262,7 +268,6 @@
                             </p>
                         </div>
                     </div>
-
                     <div class="flex items-start gap-5 group cursor-default" data-aos="fade-right" data-aos-delay="300">
                         <div class="mt-1 flex-shrink-0 transition-transform duration-300 group-hover:-translate-y-1">
                             <i class="fa-regular fa-star text-3xl md:text-4xl text-white/90 group-hover:text-yellow-300 transition-colors"></i>
@@ -274,34 +279,31 @@
                             </p>
                         </div>
                     </div>
-
                 </div>
-
+                <!-- Columna Derecha: Video -->
                 <div class="relative group w-full rounded-3xl overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] border border-white/20 bg-black" data-aos="fade-left" data-aos-delay="300">
                     <div class="absolute inset-0 bg-[#0c2363]/20 pointer-events-none z-10 mix-blend-overlay"></div>
-                    
                     <video 
                         autoplay 
                         loop 
                         muted 
                         playsinline 
-                        class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
-                    >
+                        class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105">
                         <source src="../video/asientos.mp4" type="video/mp4">
                     </video>
                 </div>
-
             </div>
         </div>
     </section>
-
+<!--
+========================================================
+==================== SECCION N4 ======================== 
+========================================================
+-->
     <section class="w-full py-16 px-6 lg:px-12 text-[#0b2265]">
         <div class="max-w-[1700px] mx-auto">
-            
             <h2 class="text-2xl md:text-4xl font-bold mb-10 tracking-tight" data-aos="fade-right">Productos Corporativos</h2>
-            
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6">
-                
                 <!-- Tarjeta 1: Eventos -->
                 <div data-aos="zoom-in" data-aos-delay="100" class="relative w-full aspect-[4/3] rounded-xl overflow-hidden group cursor-pointer bg-[#0b2463] flex items-center justify-center shadow-lg transition-transform duration-300 hover:-translate-y-1">
                     <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1000&auto=format&fit=crop" 
@@ -309,7 +311,6 @@
                          class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-40 mix-blend-overlay transition-opacity duration-500">
                     <h3 class="relative z-10 text-[#ffcc00] text-base md:text-lg xl:text-xl font-black tracking-wide uppercase text-center px-2">EVENTOS</h3>
                 </div>
-
                 <!-- Tarjeta 2: Giftcard -->
                 <div data-aos="zoom-in" data-aos-delay="200" class="relative w-full aspect-[4/3] rounded-xl overflow-hidden group cursor-pointer bg-[#0b2463] flex items-center justify-center shadow-lg transition-transform duration-300 hover:-translate-y-1">
                     <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=1000&auto=format&fit=crop" 
@@ -317,7 +318,6 @@
                          class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-40 mix-blend-overlay transition-opacity duration-500">
                     <h3 class="relative z-10 text-[#ffcc00] text-base md:text-lg xl:text-xl font-black tracking-wide uppercase text-center px-2">GIFTCARD</h3>
                 </div>
-
                 <!-- Tarjeta 3: Publicidad -->
                 <div data-aos="zoom-in" data-aos-delay="300" class="relative w-full aspect-[4/3] rounded-xl overflow-hidden group cursor-pointer bg-[#0b2463] flex items-center justify-center shadow-lg transition-transform duration-300 hover:-translate-y-1">
                     <img src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?q=80&w=1000&auto=format&fit=crop" 
@@ -325,7 +325,6 @@
                          class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-40 mix-blend-overlay transition-opacity duration-500">
                     <h3 class="relative z-10 text-[#ffcc00] text-base md:text-lg xl:text-xl font-black tracking-wide uppercase text-center px-2">PUBLICIDAD</h3>
                 </div>
-
                 <!-- Tarjeta 4: Proyecto Escolar -->
                 <div data-aos="zoom-in" data-aos-delay="400" class="relative w-full aspect-[4/3] rounded-xl overflow-hidden group cursor-pointer bg-[#0b2463] flex items-center justify-center shadow-lg transition-transform duration-300 hover:-translate-y-1">
                     <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1000&auto=format&fit=crop" 
@@ -333,7 +332,6 @@
                          class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-40 mix-blend-overlay transition-opacity duration-500">
                     <h3 class="relative z-10 text-[#ffcc00] text-base md:text-lg xl:text-xl font-black tracking-wide uppercase text-center px-2 leading-tight">PROYECTO<br>ESCOLAR</h3>
                 </div>
-
                 <!-- Tarjeta 5: Cumpleaños -->
                 <div data-aos="zoom-in" data-aos-delay="500" class="relative w-full aspect-[4/3] rounded-xl overflow-hidden group cursor-pointer bg-[#0b2463] flex items-center justify-center shadow-lg transition-transform duration-300 hover:-translate-y-1">
                     <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=1000&auto=format&fit=crop" 
@@ -341,101 +339,135 @@
                          class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-40 mix-blend-overlay transition-opacity duration-500">
                     <h3 class="relative z-10 text-[#ffcc00] text-base md:text-lg xl:text-xl font-black tracking-wide uppercase text-center px-2">CUMPLEAÑOS</h3>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <footer class="relative w-full bg-[#0b2265] text-white pt-16 pb-12 px-6 lg:px-12 overflow-hidden m-0">
+<footer class="relative w-full bg-[#0b2265] text-white pt-16 pb-12 px-6 lg:px-12 overflow-hidden m-0">
+    <!-- Contenedor principal del Footer -->
+    <div class="max-w-[1700px] mx-auto relative z-10">   
         
-        <!-- Contenedor principal del Footer -->
-        <div class="max-w-[1700px] mx-auto relative z-10">
+        <!-- Sección Superior: Columnas (Grid) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 pb-12 border-b border-white/25">
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 pb-12 border-b border-white/25">
-                
-                <!-- Columna 1: Logo y Enlaces de Cartelera -->
-                <div class="space-y-6">
-                    <!-- Logo de Cinex -->
-                    <div class="flex items-center">
-                        <img src="https://www.cinex.com.ve/assets/images/xlogo.png.pagespeed.ic.g7fFsLLvP4.webp" alt="Cinex Logo" class="h-10 object-contain">
-                    </div>
-                    <ul class="space-y-3 font-medium text-sm md:text-base">
-                        <li><a href="#" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">Cartelera</a></li>
-                        <li><a href="#" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">Cines</a></li>
-                        <li><a href="#" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">Estrenos</a></li>
-                        <li><a href="#" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">Noticias</a></li>
-                    </ul>
+            <!-- Columna 1: Logo y Enlaces de Cartelera -->
+            <div class="space-y-6">
+                <!-- Logo de Cinex -->
+                <div class="flex items-center">
+                    <img src="https://www.cinex.com.ve/assets/images/xlogo.png.pagespeed.ic.g7fFsLLvP4.webp" alt="Cinex Logo" class="h-10 object-contain">
                 </div>
-
-                <!-- Columna 2: Nosotros -->
-                <div class="space-y-6">
-                    <h3 class="text-lg font-bold tracking-wide">Nosotros</h3>
-                    <ul class="space-y-3 font-medium text-sm md:text-base">
-                        <li><a href="#" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">Presencia y publicidad</a></li>
-                        <li><a href="#" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">Productos corporativos</a></li>
-                        <li><a href="#" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">Cinexclusivo</a></li>
-                        <li><a href="#" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">Contáctanos</a></li>
-                    </ul>
-                </div>
-
-                <!-- Columna 3: Síguenos (Redes Sociales) -->
-                <div class="space-y-6 lg:col-span-2">
-                    <h3 class="text-lg font-bold tracking-wide">Síguenos</h3>
-                    <p class="text-sm md:text-base opacity-90">En nuestras redes sociales</p>
-                    
-                    <!-- Fila de Iconos de Redes Sociales -->
-                    <div class="flex items-center gap-4 pt-2">
-                        <!-- Facebook -->
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white hover:text-[#0b2265] flex items-center justify-center transition-all duration-300">
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                        </a>
-                        <!-- Instagram -->
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white hover:text-[#0b2265] flex items-center justify-center transition-all duration-300">
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                        </a>
-                        <!-- TikTok -->
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white hover:text-[#0b2265] flex items-center justify-center transition-all duration-300">
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.242V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.853 4.853 0 0 1-1.01-.104z"/></svg>
-                        </a>
-                        <!-- YouTube -->
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white hover:text-[#0b2265] flex items-center justify-center transition-all duration-300">
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                        </a>
-                    </div>
-                </div>
-
+                <ul class="space-y-3 font-medium text-sm md:text-base">
+                    <li><a href="#" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">Cartelera</a></li>
+                    <li><a href="#" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">Cines</a></li>
+                    <li><a href="#" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">Estrenos</a></li>
+                    <li><a href="#" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">Noticias</a></li>
+                </ul>
             </div>
 
-            <!-- Fila Inferior: Términos, Copyright y Sellos de Marcas -->
-            <div class="pt-8 flex flex-col lg:flex-row items-center justify-between gap-6">
+            <!-- Columna 2: Nosotros -->
+            <div class="space-y-2">
+                <h3 class="text-lg font-bold tracking-wide">Nosotros</h3>
+                <ul class="space-y-3 font-medium text-sm md:text-base">
+                    <li><a href="#" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">Presencia y publicidad</a></li>
+                    <li><a href="#" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">Productos corporativos</a></li>
+                    <li><a href="#" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">Cinexclusivo</a></li>
+                    <li><a href="#" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">Contáctanos</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Síguenos (Redes Sociales) -->
+            <div class="space-y-6 lg:col-span-2 text-left">
+                <!-- Grupo de títulos con espacio reducido -->
+                <div class="space-y-1">
+                    <h3 class="text-lg font-bold tracking-wide">Síguenos</h3>
+                    <p class="text-sm md:text-base opacity-90">En nuestras redes sociales</p>
+                </div>
                 
-                <!-- Términos y Copyright -->
-                <div class="text-xs md:text-sm opacity-80 text-center lg:text-left space-y-1">
-                    <p class="font-bold tracking-wider">TERMINOS Y CONDICIONES</p>
-                    <p>Suramericana de Espectáculos S.A. RIF: J-00045832-4 | © Copyright 2026. Cinex. Todos los derechos reservados.</p>
+                <!-- Fila de Iconos de Redes Sociales -->
+                <div class="flex items-center justify-center lg:justify-start gap-4 pt-2">
+                    <!-- Facebook -->
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-yellow-400 hover:text-[#0b2265] active:bg-yellow-400 active:text-[#0b2265] focus:bg-yellow-400 focus:text-[#0b2265] flex items-center justify-center transition-all duration-300">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-yellow-400 hover:text-[#0b2265] active:bg-yellow-400 active:text-[#0b2265] focus:bg-yellow-400 focus:text-[#0b2265] flex items-center justify-center transition-all duration-300">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <!-- TikTok -->
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-yellow-400 hover:text-[#0b2265] active:bg-yellow-400 active:text-[#0b2265] focus:bg-yellow-400 focus:text-[#0b2265] flex items-center justify-center transition-all duration-300">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.242V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.853 4.853 0 0 1-1.01-.104z"/></svg>
+                    </a>
+                    <!-- YouTube -->
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-yellow-400 hover:text-[#0b2265] active:bg-yellow-400 active:text-[#0b2265] focus:bg-yellow-400 focus:text-[#0b2265] flex items-center justify-center transition-all duration-300">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
                 </div>
+            </div>
+        </div> <!-- Fin de las Columnas -->
 
-                <!-- Sellos de Marcas (4DX, Cinex Chef, Cinexclusivo, Cinex Play, Cinex VIP) -->
-                <div class="flex flex-wrap items-center justify-center gap-6 opacity-90">
-                    <span class="text-xl font-black italic tracking-tighter">4DX</span>
-                    <span class="text-sm font-bold tracking-wider uppercase border border-white/40 px-2 py-1 rounded">Cinex Chef</span>
-                    <span class="text-sm font-bold tracking-wider uppercase border border-white/40 px-2 py-1 rounded">Cinexclusivo</span>
-                    <span class="text-sm font-bold tracking-wider uppercase border border-white/40 px-2 py-1 rounded">Cinex Play</span>
-                    <span class="text-sm font-bold tracking-wider uppercase border border-white/40 px-2 py-1 rounded">Cinex VIP</span>
-                </div>
-
+        <!-- Sección Inferior: Términos (Izquierda) y Logos (Derecha) -->
+        <div class="pt-8 flex flex-col lg:flex-row items-center justify-between gap-6 w-full">
+            
+            <!-- Términos y Copyright (A la izquierda) -->
+            <div class="text-xs md:text-sm opacity-80 text-center lg:text-left space-y-1 w-full lg:w-auto shrink-0">
+                <p class="font-bold tracking-wider">TÉRMINOS Y CONDICIONES</p>
+                <p>Suramericana de Espectáculos S.A. RIF: J-00045832-4 | © Copyright 2026. Cinex. Todos los derechos reservados.</p>
+            </div>
+            
+            <!-- Sellos de Marcas -->
+            <div class="flex flex-nowrap items-center justify-start lg:justify-end gap-4 md:gap-5 opacity-95 w-full lg:w-auto overflow-x-auto lg:overflow-visible scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden shrink-0">
+                <span class="text-2xl font-black italic tracking-tighter shrink-0 text-white">4DX</span>
+                <img src="https://www.cinex.com.ve/assets/images/footerlogos/xcinexchef.png.pagespeed.ic.2F1R31TMxY.webp" 
+                    alt="Cinex Chef" 
+                    class="h-6 md:h-8 object-contain shrink-0">
+                <img src="https://www.cinex.com.ve/assets/images/footerlogos/xcinexclusivo.png.pagespeed.ic.Kb9-fgqtpH.webp" 
+                    alt="Cinexclusivo" 
+                    class="h-6 md:h-8 object-contain shrink-0">
+                <img src="https://www.cinex.com.ve/assets/images/footerlogos/xcinexplay.png.pagespeed.ic.Imy2IidQKK.webp" 
+                    alt="Cinex Play" 
+                    class="h-6 md:h-8 object-contain shrink-0">
+                <img src="https://www.cinex.com.ve/assets/images/xcinexvip.png.pagespeed.ic.KNhbzr-O6k.webp" 
+                    alt="Cinex VIP" 
+                    class="h-6 md:h-8 object-contain shrink-0">  
             </div>
 
         </div>
-    </footer>
-
+    </div>
+</footer>
+<!--
+========================================================
+==================== ANIMACIONES ======================= 
+========================================================
+-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 700,
-            once: false,
-            offset: 100
-        });
-    </script>
+        <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+        <script>
+            // --- A. Inicializar (Animaciones de los elementos) ---
+            AOS.init({
+                duration: 600,
+                once: false,
+                offset: 100
+            });
+
+            // --- B. Inicializar Lenis (animacion de desplazamiento de pagina) ---
+            const lenis = new Lenis({
+                duration: 2.2, 
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+                direction: 'vertical',
+                gestureDirection: 'vertical',
+                smooth: true,
+                mouseMultiplier: 1,
+                smoothTouch: false,
+                touchMultiplier: 2,
+                infinite: false,
+            });
+
+            // Ciclo de animación (Esto hace que Lenis funcione fluidamente)
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+        </script>
 </body>
 </html>
